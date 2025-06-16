@@ -3,7 +3,7 @@
 <main>
   <input type="text" (change)="sendMessage($event)" />
   <hr>
-  <div>{{ messageFromServer }}</div>
+  <div *ngFor="let notification of notifications"> {{ notification.value }}</div>
 </main>
 
 <router-outlet />
